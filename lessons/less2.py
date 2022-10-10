@@ -1,5 +1,3 @@
-
-
 # супер Класс
 class Human:
     # атрибуты класса
@@ -25,11 +23,11 @@ class Hero(Human):
         super().__init__(name, age)
         self.super = superAbitity
 
+    def __medot(self):
+        print(self.age * 2)
+
     def medot(self, p):
         print('есть способности и что-то ещё')
-
-    def __medot(self):
-        print(self.age*2)
 
 
 class WoterHero(Hero):
@@ -47,13 +45,18 @@ class FireHero(Hero):
         self.nick = nickname
 
 
-human = Human('beka', 50)
-# human.medot('вот это')
+# human = Human('beka', 50)
+# human.medot()
+
 
 hero = Hero('beka', 23, 'Жаловаться')
+hero.medot(2)
+hero.medot(1)
 # print(hero.name, hero.super)
 # hero.medot()
+
 woter = WoterHero('Нурсултан', 12, 'общаться с рыбами')
+
 # print(f'меня зовут {woter.name} и я умею {woter.super} а еще есть способность {woter.t} ')
 woter.medot('1')
 
@@ -70,12 +73,12 @@ class Password:
         self.__lenPass()
 
     def __lenPass(self):
-        if len(self.passw)<5:
+        if len(self.passw) < 5:
             raise ValueError('слишком короткий пароль')
 
     def save(self):
-        with open('users','a') as r:
-            r.write(f'{self.passw,self.login}'+'\n')
+        with open('users', 'a') as r:
+            r.write(f'{self.passw, self.login}' + '\n')
 
-d=Password('lenn','123456876')
-d.save()
+# d=Password('lenn','123456876')
+# d.save()
