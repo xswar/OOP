@@ -10,7 +10,7 @@ class Hero:
     def two_damage(self):
         self.damage *= 2
     def greetings(self):
-        print(f'my name is {self.name}'
+        print(f'my name is {self.name}')
     def brand_phrase(self):
         print('good will win')
 
